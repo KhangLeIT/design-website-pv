@@ -1,0 +1,139 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    width: 20%;
+    bottom: 0;
+    left: 37%;
+    z-index: 999;
+    background: none;
+
+}
+.content-container {
+    position: fixed;
+    bottom: 0;
+    width: 15%; /* Để phần tử này có chiều rộng tương đương với màn hình */
+}
+
+.content-nav {
+    display: flex;
+    justify-content: space-evenly;
+    /* Căn các mục menu đều nhau */
+    align-items: center;
+    /* Căn chỉnh menu theo trục dọc */
+    border-radius: 40px;
+    /* Làm tròn các góc */
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 1);
+    /* Tạo viền trắng xung quanh */
+}
+
+.content-nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+
+    /* Khoảng cách giữa các mục menu */
+    justify-content: space-between;
+    /* Đặt chữ "Products" ở biên */
+}
+
+.content-nav ul li {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: #00FF00; /* Đổi #yourColor thành mã màu bạn muốn áp dụng */
+    border-radius: 50%; /* Để hình ảnh trở thành hình tròn */
+    width: 60px; /* Kích thước hình ảnh */
+    height: 60px;
+
+}
+.content-nav ul li img {
+    border-radius: 50%;
+    /* Để hình ảnh trở thành hình tròn */
+    width: 50px; /* Có thể điều chỉnh kích thước hình ảnh tùy thuộc vào nhu cầu */
+    height: 50px;
+    margin-left: 5px;
+    /* Đảm bảo chiều cao và chiều rộng giống nhau để hình ảnh trở thành hình tròn */
+}
+
+
+/* CSS */
+.content-nav ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    /* Chuyển đổi văn bản thành chữ in hoa */
+    letter-spacing: 1px;
+    /* Khoảng cách giữa các ký tự */
+}
+
+
+.content-ul {
+    margin-top: 5px;
+    margin-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.content-ul li {
+    transition: transform 0.3s ease, translateY 0.3s ease;
+}
+
+.content-ul li:hover {
+    transform: scale(1.2);
+    transform-origin: center center; /* Để giữ hình ảnh ở vị trí trung tâm khi phóng to */
+    transition: transform 0.3s ease, translateY 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 1; /* Để hình ảnh hiển thị trên cùng */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ */
+}
+
+.content-ul li:hover {
+    transform: scale(1.2) translateY(-20px);
+    z-index: 1;
+    position: relative;
+}
+
+.content-ul li.selected {
+    transform: scale(1.2) translateY(-20px);
+    z-index: 10; /* Đặt giá trị z-index lớn hơn để hình ảnh được chọn nằm trên cùng */
+    position: relative;
+}
+
+.selected-li {
+    transform: translateY(-20px); /* Di chuyển lên trên 20px (hoặc giá trị mong muốn) */
+}
+
+.selected-text {
+    margin-left: 45%;
+    transform: translateY(-150px);
+    /* Di chuyển lên trên 20px (hoặc giá trị mong muốn) */
+    
+}
+
+.selected-text a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #dc1eaaed; /* Choose your desired border color */
+    border-radius: 50px; /* Ensures the border creates a circle */
+    text-decoration: none;
+    color: #dc1eaaed; /* Choose your desired text color */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.selected-text a:hover {
+    background-color: #dc1eaaed; /* Background color change on hover */
+    color: #fff; /* Text color change on hover */
+}

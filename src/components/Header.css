@@ -1,0 +1,245 @@
+/* Header.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    width: 40%;
+    top: 5%;
+    left: 30%;
+    z-index: 999;
+    background: none;
+
+}
+
+
+.header-rounded {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* Đảm bảo phần tử này chiếm hết không gian */
+}
+
+
+.logo {
+    width: 10%;
+    /* Chiều rộng 50% */
+    max-width: 300px;
+    /* Độ rộng tối đa cho logo */
+    margin-right: 20px;
+}
+
+.logo img {
+    width: 100%;
+    /* Chiều rộng 100% */
+    height: auto;
+    /* Đảm bảo tỷ lệ hình ảnh không bị méo */
+    max-width: 100%;
+    /* Độ rộng tối đa cho hình ảnh logo */
+}
+
+
+.navigation {
+    display: flex;
+    justify-content: space-evenly;
+    /* Căn các mục menu đều nhau */
+    align-items: center;
+    /* Căn chỉnh menu theo trục dọc */
+    border-radius: 80px;
+    /* Làm tròn các góc */
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 1);
+    /* Tạo viền trắng xung quanh */
+}
+
+.navigation ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+
+    /* Khoảng cách giữa các mục menu */
+    justify-content: space-between;
+    /* Đặt chữ "Products" ở biên */
+}
+
+.navigation ul li {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+}
+
+/* CSS */
+.navigation ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    /* Chuyển đổi văn bản thành chữ in hoa */
+    letter-spacing: 1px;
+    /* Khoảng cách giữa các ký tự */
+}
+
+
+.ulMenu {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Đưa icons về phía sau của menu */
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    margin-left: 10px;
+}
+
+.icons img {
+    max-width: 30px;
+}
+
+
+.bottom-right {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: none;
+}
+
+.mobile-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #84d4eb;/* Màu nền header */
+    color: black;/* Màu chữ */
+    font-weight: bold;
+    text-transform: uppercase;
+    display: none;
+}
+
+
+
+
+
+.mobile-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    /* Khoảng cách giữa menu và icons */
+}
+
+.mobile-ulMenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.mobile-menu-item {
+    margin-bottom: 10px;
+}
+
+.mobile-menu-item a {
+    text-decoration: none;
+    color: black;
+    /* Màu chữ các menu */
+}
+
+.mobile-icons {
+    display: flex;
+    justify-content: center;
+    /* Căn giữa các icon theo chiều ngang */
+    align-items: center;
+}
+
+.mobile-icons a {
+    margin: 0 10px;
+    /* Khoảng cách giữa các icon */
+}
+
+.mobile-icons a img {
+    max-width: 30px;
+    /* Kích thước tối đa của icon */
+   
+}
+
+.mobile-logo {
+    display: flex;
+    justify-content: center;
+    /* Căn giữa các icon theo chiều ngang */
+    align-items: center;
+}
+
+.mobile-logo img {
+    width: 20%;
+    /* Chiều rộng 100% */
+    height: auto;
+    /* Đảm bảo tỷ lệ hình ảnh không bị méo */
+    max-width: 29%;
+    /* Độ rộng tối đa cho hình ảnh logo */
+    display: flex;
+    justify-content: center;
+    /* Căn giữa các icon theo chiều ngang */
+    align-items: center;
+}
+
+
+/* Media query cho kích thước màn hình nhỏ hơn 768px (điện thoại) */
+@media screen and (max-width: 768px) {
+
+    /* Hiển thị icon menu khi chuyển sang chế độ điện thoại */
+    .menu-icon {
+        display: block;
+        /* Các thuộc tính khác cho icon menu ở chế độ điện thoại */
+    }
+
+    /* Ẩn phần header khi chuyển sang chế độ điện thoại */
+    .header {
+        display: none;
+    }
+    .bottom-right{
+        display: block;
+    }
+
+    
+    
+/* Media query cho kích thước màn hình nhỏ hơn 768px (điện thoại) */
+@media screen and (max-width: 768px) {
+
+    /* Hiển thị icon menu khi chuyển sang chế độ điện thoại */
+    .menu-icon {
+        display: block;
+        /* Các thuộc tính khác cho icon menu ở chế độ điện thoại */
+    }
+
+    /* Ẩn phần header khi chuyển sang chế độ điện thoại */
+    .header {
+        display: none;
+    }
+    .bottom-right{
+        display: block;
+    }
+    .mobile-header{
+        display:block;
+    }
+}
+}
+.selected {
+    background-color: red; /* hoặc màu nền mong muốn */
+    /* Các thuộc tính khác nếu cần */
+    border-radius: 80px;
+  }
+  
